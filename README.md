@@ -1,5 +1,2 @@
-### TODO ### 
-
-* Kategorije proizvoda?
-* Imei za restrikciju na backendu? jedan app jedan popust na dan
-* Kreirati callbackove za aplikacijuy
+### Description ###
+Backend for the project "Shop app" (https://github.com/dbikic/Shop_app)
