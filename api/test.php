@@ -1,0 +1,12 @@
+<?php
+
+   if($_GET['id'] == 1){
+        echo '{"status":true,"beacons":[{"id":"1","factory_id":"6HU1-R7XS5","discountName":"eEeEe","discountProduct":"e","discountNewPrice":"0","discountOldPrice":"0","discountValidFrom":"2015-06-13 05:34:00","discountValidTo":"2015-06-23 17:34:00"},{"id":"2","factory_id":"PPCN-QWM7G","discountName":"ime","discountProduct":"das","discountNewPrice":"40","discountOldPrice":"100","discountValidFrom":"2015-06-11 00:12:00","discountValidTo":"2015-06-12 02:12:00"},{"id":"3","factory_id":"MGWV-YJA5J","discountName":"asdasd","discountProduct":"1","discountNewPrice":"1","discountOldPrice":"1","discountValidFrom":"1111-11-11 11:11:00","discountValidTo":"2222-02-22 14:22:00"}],"store":"Plodine Kostrena"}';   
+   }
+   else if($_GET['id'] == 2){
+        echo '{"status":true,"beacons":[{"id":"1","factory_id":"6HU1-R7XS5","discountName":"eEeEe","discountProduct":"e","discountNewPrice":"0","discountOldPrice":"0","discountValidFrom":"2015-06-13 05:34:00","discountValidTo":"2015-06-23 17:34:00"},{"id":"2","factory_id":"PPCN-QWM7G","discountName":"ime","discountProduct":"das","discountNewPrice":"40","discountOldPrice":"100","discountValidFrom":"2015-06-11 00:12:00","discountValidTo":"2015-06-12 02:12:00"},{"id":"3","factory_id":"MGWV-YJA5J","discountName":"asdasd","discountProduct":"1","discountNewPrice":"1","discountOldPrice":"1","discountValidFrom":"1111-11-11 11:11:00","discountValidTo":"2222-02-22 14:22:00"}],"store":"Plodine Kostrena"}';   
+   }
+   else if($_GET['id'] == 3){
+        echo '{"status":true,"beacons":[{"id":"1","factory_id":"6HU1-R7XS5","discountName":"eEeEe","discountProduct":"e","discountNewPrice":"0","discountOldPrice":"0","discountValidFrom":"2015-06-13 05:34:00","discountValidTo":"2015-06-23 17:34:00"},{"id":"2","factory_id":"PPCN-QWM7G","discountName":"ime","discountProduct":"das","discountNewPrice":"40","discountOldPrice":"100","discountValidFrom":"2015-06-11 00:12:00","discountValidTo":"2015-06-12 02:12:00"},{"id":"3","factory_id":"MGWV-YJA5J","discountName":"asdasd","discountProduct":"1","discountNewPrice":"1","discountOldPrice":"1","discountValidFrom":"1111-11-11 11:11:00","discountValidTo":"2222-02-22 14:22:00"}],"store":"Plodine Kostrena"}';   
+   }
+?>
