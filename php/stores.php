@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
 	<head>
@@ -23,14 +23,14 @@
 					&nbsp;
                     </div>
                     <div >
-                        <?php include "logout_menu.php"; ?>                        
+                        <?php include "logout_menu.php"; ?>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
-                <?php 
-                    include('menu.php'); 
-                    print_menu(1);                
+
+                <?php
+                    include('menu.php');
+                    print_menu(1);
                 ?>
             <div style="clear: both;"></div>
         </div>
@@ -41,7 +41,7 @@
                         <?php
                             $sql= mysql_query ("select name from chain_store where id='". $_SESSION['chain_store']."'");
                             $row = mysql_fetch_array($sql);
-                            echo "Chain store: " . $row['name'];
+                            echo "Lanac poslovnica: " . $row['name'];
                         ?>
                         </span></h2>
 
@@ -50,10 +50,10 @@
                         <table id="myTable">
                         	<thead>
                                 <tr >
-                                    <th style="width:10%; text-align:center;" >Name</th>
-                                    <th style="width:10%; text-align:center;">Address</th>
-                                    <th style="width:10%; text-align:center;">Telephone</th>
-                                    <th style="width:10%; text-align:center;">Actions</th>
+                                    <th style="width:10%; text-align:center;" >Ime poslovnice</th>
+                                    <th style="width:10%; text-align:center;">Adresa</th>
+                                    <th style="width:10%; text-align:center;">Telefon</th>
+                                    <th style="width:10%; text-align:center;">Akcije</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,12 +77,12 @@
                         </table>
                         </form>
                         <div style="clear: both"></div>
-                     </div> 
-                </div> 
-			</div> 
+                     </div>
+                </div>
+			</div>
             <div style="clear:both;"></div>
             <div style="clear:both;"></div>
-        </div> 
+        </div>
         <div id="kontejner"></div>
 	</body>
 </html>

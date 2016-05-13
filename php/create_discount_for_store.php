@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
     <head>
@@ -23,14 +23,14 @@
                     &nbsp;
                     </div>
                     <div >
-                        <?php include "logout_menu.php"; ?>                        
+                        <?php include "logout_menu.php"; ?>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
-                <?php 
-                    include('menu.php'); 
-                    print_menu(2);                
+
+                <?php
+                    include('menu.php');
+                    print_menu(2);
                 ?>
             <div style="clear: both;"></div>
         </div>
@@ -38,46 +38,46 @@
                 <!-- Body -->
                 <div class="module">
                     <a href="store_discounts.php?id=<?php echo $_GET['store']; ?>"  class="button">
-                        	
-                                <span>Back&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
+
+                                <span>Nazad&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
                     </a>
-                     <h2><span><br/>Add new discount</span></h2>
-                        
+                     <h2><span><br/>Dodaj novi popust</span></h2>
+
                      <div class="module-body">
                         <form method="POST" action="set_discount_for_store.php" id="forma" onsubmit="return validacija()">
-							
+
 						<p>
-                            <label>Discount name</label>
-                            <input type='text'  name='name' placeholder='Name' class='input-short' value='' required/>
+                            <label>Naziv popusta</label>
+                            <input type='text'  name='name' placeholder='Naziv popusta' class='input-short' value='' required/>
                         </p>
-                        
+
                          <p>
-                            <label>Product</label>
-                            <input type='text'  name='product' placeholder='Product' class='input-short' value='' required/>
+                            <label>Proizvod</label>
+                            <input type='text'  name='product' placeholder='Proizvod' class='input-short' value='' required/>
                         </p>
-					
+
                          <p>
-                            <label>Old price</label>
-                            <input type='text'  name='oldPrice' placeholder='Old price' class='input-short' value='' required/>
+                            <label>Stara cijena</label>
+                            <input type='text'  name='oldPrice' placeholder='Stara cijena' class='input-short' value='' required/>
                         </p>
-					
+
                          <p>
-                            <label>New price</label>
-                            <input type='text'  name='newPrice' placeholder='New price' class='input-short' value='' required/>
-                        </p>   
-						
+                            <label>Nova cijena</label>
+                            <input type='text'  name='newPrice' placeholder='Nova cijena' class='input-short' value='' required/>
+                        </p>
+
                          <p>
-                            <label>Start date and time  (mm/dd/yyyy, hh:mm)</label>
+                            <label>Datum početka (dd/mm/yyyy, hh:mm)</label>
                             <input id="start" name="start" type="datetime-local" required>
-                        </p>   
-						
+                        </p>
+
                          <p>
-                            <label>End date and time (mm/dd/yyyy, hh:mm)</label>
+                            <label>Datum kraja (dd/mm/yyyy, hh:mm)</label>
                             <input id="end" name="end" type="datetime-local" required>
-                        </p>   
+                        </p>
                             <?php
-                                echo "</br>Select beacon for discount:</br><select name='beacon' required>
-                                <option value=''>Please select</option>";
+                                echo "</br>Odaberite oglašivač za popust:</br><select name='beacon' required>
+                                <option value=''>Molimo izaberite</option>";
                                 $sql= mysql_query ("SELECT * FROM beacon");
                                 while ($row = mysql_fetch_array($sql))
                                 {
@@ -86,8 +86,8 @@
                                 echo "</select>
                                 <input type='hidden'  name='store' value='".$_GET['store']."' required/>";
                             ?>
-                            
-                            <br><br>    <input  type="submit" value="Submit" /> 
+
+                            <br><br>    <input  type="submit" value="Dodaj" />
                         </form>
                      </div> <!-- End .module-body -->
 

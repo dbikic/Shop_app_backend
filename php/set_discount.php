@@ -9,8 +9,8 @@
     $start = new DateTime(formatDateTime($_POST['start']));
     $end = new DateTime(formatDateTime($_POST['end']));
 
-    if($end < $start) 
-        echo "End date is before start date, please enter valid time.";
+    if($end < $start)
+        echo "Krajnji datum je prije početnog, molimo onesite ispravno vrijeme.";
     else{
         session_start();
         include("../config/db_connect.php");
@@ -38,9 +38,9 @@
                                     )";
             echo $query;
             if (mysql_query($query) or die(mysql_error())) {
-                header("Location: create_discount.php");     
+                header("Location: create_discount.php");
             }
-        }    
+        }
     }
 
 ?>

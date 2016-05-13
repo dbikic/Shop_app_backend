@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
     <head>
@@ -23,45 +23,45 @@
                     &nbsp;
                     </div>
                     <div >
-                        <?php include "logout_menu.php"; ?>                        
+                        <?php include "logout_menu.php"; ?>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
-                <?php 
-                    include('menu.php'); 
-                    print_menu(3);                
+
+                <?php
+                    include('menu.php');
+                    print_menu(3);
                 ?>
             <div style="clear: both;"></div>
         </div>
         <div >
             <!-- Body -->
                 <div class="module">
-                     <h2><span>Add new store</span></h2>
-                        
+                     <h2><span>Dodaj novu poslovnicu</span></h2>
+
                      <div class="module-body">
                         <form method="POST" action="set_store.php" id="forma" onsubmit="return validacija()">
-							
-						<p>
-                            <label>Store name</label>
-                            <input type='text'  name='name' placeholder='Name' class='input-short' value='' required/>
-                        </p>
-                         <p>
-                            <label>Store address</label>
-                            <input type='text'  name='address' placeholder='Address' class='input-short' value='' required/>
-                        </p>
-                         <p>
-                            <label>Telephone</label>
-                            <input type='text'  name='telephone' placeholder='Telephone' class='input-short' value='' required/>
-                        </p>                            
-                            
-                            <br>    <input  type="submit" value="Submit" /> 
-                        </form>
-                     </div> 
 
-                </div>  
+						<p>
+                            <label>Ime poslovnice</label>
+                            <input type='text'  name='name' placeholder='Ime poslovnice' class='input-short' value='' required/>
+                        </p>
+                         <p>
+                            <label>Adresa poslovnice</label>
+                            <input type='text'  name='address' placeholder='Ime poslovnice' class='input-short' value='' required/>
+                        </p>
+                         <p>
+                            <label>Telefon</label>
+                            <input type='text'  name='telephone' placeholder='Telefon' class='input-short' value='' required/>
+                        </p>
+
+                            <br>    <input  type="submit" value="Dodaj" />
+                        </form>
+                     </div>
+
+                </div>
         		<div style="clear:both;"></div>
-            </div> 
+            </div>
 
 			</div>
 

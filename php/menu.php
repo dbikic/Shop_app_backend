@@ -12,20 +12,20 @@
             else
                 echo '<li>';
             echo '
-                                    <a href="stores.php">Stores</a></li>';
+                                    <a href="stores.php">Poslovnice</a></li>';
             if($i == 2)
                 echo '<li id="current">';
             else
                 echo '<li>';
             echo '
-                                    <a href="create_discount.php">Create discount</a></li>';
+                                    <a href="create_discount.php">Kreiraj popust</a></li>';
             if($i == 3)
                 echo '<li id="current">';
             else
                 echo '<li>';
             echo '
-                                    <a href="create_store.php">Create store</a></li>';
-        
+                                    <a href="create_store.php">Kreiraj poslovnicu</a></li>';
+
         echo '
                                 </ul>
                             </div>
@@ -35,4 +35,4 @@
                 </div>
                 ';
     }
-?>            
+?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
     <head>
@@ -23,14 +23,14 @@
                     &nbsp;
                     </div>
                     <div >
-                        <?php include "logout_menu.php"; ?>                        
+                        <?php include "logout_menu.php"; ?>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
-                <?php 
-                    include('menu.php'); 
-                    print_menu(1);                
+
+                <?php
+                    include('menu.php');
+                    print_menu(1);
                 ?>
             <div style="clear: both;"></div>
         </div>
@@ -38,19 +38,19 @@
                 <!-- Body -->
                 <div class="module">
                      <a href="store_discounts.php?id=<?php echo $_GET['store'];?>"  class="button">
-                        	<span>Back&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
+                        	<span>Nazad&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
                     </a
-            
+
 
                     <div class="module-table-body">
                     	<form action="">
                         <table id="myTable" class="tablesorter">
                         	<thead>
                                 <tr >
-                                    <th style="width:10%; text-align:center;" >User IMEI</th>
-                                    <th style="width:10%; text-align:center;">Code</th>
-                                    <th style="width:10%; text-align:center;">TImestamp</th>
-                                    <th style="width:10%; text-align:center;">Actions</th>
+                                    <th style="width:10%; text-align:center;" >Korisnički IMEI</th>
+                                    <th style="width:10%; text-align:center;">Kod</th>
+                                    <th style="width:10%; text-align:center;">Vrijeme</th>
+                                    <th style="width:10%; text-align:center;">Akcije</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,14 +58,14 @@
 								<?php
                                     $sql= mysql_query ("SELECT * FROM `codes` WHERE id_discount = ".$_GET['id']."");
                                     while ($row = mysql_fetch_array($sql))
-                                    {                    
+                                    {
                                         echo "<tr>
                     								<td class='align-center'>".$row['user_id']."</td>
                     								<td class='align-center'>".$row['code']."</td>
                     								<td class='align-center'>".$row['time']."</td>
-                    								<td class='align-center'>								
+                    								<td class='align-center'>
                     									<img src='../img/minus-circle.gif'  onclick='delete_code(".$row['id'].", ".$_GET['id'].", ".$_GET['store'].")' width='16' height='16' title='Briši' />&nbsp;&nbsp;
-                    									
+
                     								</td>
                     							</tr>  ";
                                     }
@@ -73,7 +73,7 @@
                             </tbody>
                         </table>
                         </form>
-                        
+
 
                         <div style="clear: both"></div>
                      </div>

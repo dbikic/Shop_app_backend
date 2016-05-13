@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
 	<head>
@@ -27,13 +27,13 @@
 					&nbsp;
                     </div>
                     <div class="grid_4">
-                        <?php include "logout_menu.php"; ?>                    
+                        <?php include "logout_menu.php"; ?>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
-                <?php 
-                    include('menu.php'); 
+
+                <?php
+                    include('menu.php');
                     print_menu(1);
                 ?>
             <div style="clear: both;"></div>
@@ -42,45 +42,45 @@
 
 		<div class="container_12">
  <div class="grid_12">
-            
+
                 <div class="module">
                     <a href="stores.php"  class="button">
-                        	<span>Back&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
+                        	<span>Nazad&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
                     </a>
-                     <h2><span><br/>Edit store</span></h2>
+                     <h2><span><br/>Uredi poslovnicu</span></h2>
 
 
                      <div class="module-body">
                         <form method="POST" action="update_store.php" id="forma" onsubmit="return validacija()">
-                            
+
                     <?php
                         $sql= mysql_query ("SELECT * FROM store where id='".$_GET['id']."'");
                         $row = mysql_fetch_array($sql);
-                                
+
                         echo "
 						<p>
-                            <label>Store name</label>
-                            <input type='text'  name='name' placeholder='Name' class='input-short' value='".$row['name']."' required/>
+                            <label>Ime poslovnice</label>
+                            <input type='text'  name='name' placeholder='Ime poslovnice' class='input-short' value='".$row['name']."' required/>
                         </p>
                          <p>
-                            <label>Store address</label>
-                            <input type='text'  name='address' placeholder='Address' class='input-short' value='".$row['address']."' required/>
+                            <label>Adresa poslovnice</label>
+                            <input type='text'  name='address' placeholder='Adresa poslovnice' class='input-short' value='".$row['address']."' required/>
                         </p>
                          <p>
-                            <label>Telephone</label>
-                            <input type='text'  name='telephone' placeholder='Telephone' class='input-short' value='".$row['telephone']."' required/>
-                        </p>  
+                            <label>Telefon</label>
+                            <input type='text'  name='telephone' placeholder='Telefon' class='input-short' value='".$row['telephone']."' required/>
+                        </p>
                             <input type='hidden'  name='id' value='".$_GET['id']."' required/>
                         ";
 
-                          ?>  
-                            <br>    <input  type="submit" value="Update" /> 
+                          ?>
+                            <br>    <input  type="submit" value="Spremi" />
                         </form>
-                     </div> 
+                     </div>
 
-                </div>  
+                </div>
         		<div style="clear:both;"></div>
-            </div> 
+            </div>
 
 			</div>
 

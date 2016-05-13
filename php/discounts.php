@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php"); 
+    if(!isset($_SESSION["ulogiraniUser"])) header("Location: 404.php");
 ?>
 <html>
 	<head>
@@ -12,10 +12,10 @@
 		<script type="text/javascript" src="../js/jquery.tablesorter.min.js" ></script>
 		<script type="text/javascript" src="../js/jquery.tablesorter.pager.js"></script>
 		<script type="text/javascript" src="../js/moj.js" ></script>
-        
+
     <script src='pdfmake.min.js'></script>
  	<script src='vfs_fonts.js'></script>
-   
+
 
         <!-- Initiate tablesorter script -->
         <script type="text/javascript">
@@ -47,12 +47,12 @@
 					&nbsp;
                     </div>
                     <div class="grid_4">
-                        <a href="logout.php" id="logout">Logout
+                        <a href="logout.php" id="logout">Odjava
                         </a>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                
+
             <div id="header-main">
                 <div class="container_12">
                     <div class="grid_12">
