@@ -47,7 +47,7 @@
 
                         	<span>Nazad&nbsp;&nbsp;<img src="../img/arrow-180.gif" width="12" height="9"  /></span>
                         </a>
-                     <h2><span><br/>Uredi poslovnicu</span></h2>
+                     <h2><span><br/>Uredi popust</span></h2>
 
                      <div class="module-body">
                         <form method="POST" action="update_discount.php" id="forma" onsubmit="return validacija()">
